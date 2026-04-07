@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+  <model name="slat">
+    <link name="link">
+      <inertial>
+        <mass>0.3</mass>
+        <inertia>
+          <ixx>0.004867</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.000050</iyy>
+          <iyz>0</iyz>
+          <izz>0.004883</izz>
+        </inertia>
+      </inertial>
+
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.04 0.44 0.02</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>8.0</mu>
+              <mu2>8.0</mu2>
+              <fdir1>1 0 0</fdir1>
+            </ode>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e6</kp>
+              <kd>10</kd>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.04 0.44 0.02</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.15 0.15 0.15 1</ambient>
+          <diffuse>0.15 0.15 0.15 1</diffuse>
+          <specular>0.2 0.2 0.2 1</specular>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

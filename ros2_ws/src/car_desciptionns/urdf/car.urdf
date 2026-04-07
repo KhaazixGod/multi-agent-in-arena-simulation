@@ -1,0 +1,457 @@
+<?xml version="1.0"?>
+<robot name="car_robot">
+
+  <!-- =============================== BÓNG TRÊN MẶT ĐẤT ============================== -->
+  <link name="base_footprint"/>
+
+  <!-- Nâng toàn bộ xe lên 5cm để bánh xe vừa chạm đất -->
+  <joint name="base_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0.05" rpy="0 0 0"/>
+  </joint>
+
+  <!-- =============================== TẦNG ĐÁY (Khung gầm) ========================= -->
+  <link name="base_link">
+    <!-- KHỐI LƯỢNG & QUÁN TÍNH -->
+    <inertial>
+      <origin xyz="0 0 0.03" rpy="0 0 0"/>
+      <mass value="2.0"/>
+      <inertia ixx="0.007266" ixy="0.0" ixz="0.0" iyy="0.011866" iyz="0.0" izz="0.017933"/>
+    </inertial>
+
+    <visual>
+      <geometry>
+        <mesh filename="package://car_desciptionns/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="Silver"><color rgba="0.8 0.8 0.8 1.0"/></material>
+    </visual>
+    
+    <!-- VA CHẠM THÂN XE: Bóp hẹp Y để bánh xe rảnh rang xoay -->
+    <collision>
+      <origin xyz="0 0 0.03" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.26 0.15 0.06"/>
+      </geometry>
+    </collision>
+
+  </link>
+
+  <gazebo reference="base_link">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Silver</material>
+  </gazebo>
+
+  <!-- =============================== 4 BÁNH ĐỠ GÓC (CASTERS) ===================== -->
+  <!-- Trước Trái -->
+  <joint name="caster_fl_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="caster_fl_link"/>
+    <origin xyz="0.075 0.06 -0.005" rpy="0 0 0"/>
+  </joint>
+  <link name="caster_fl_link">
+    <inertial>
+      <origin xyz="0 0 0.03" rpy="0 0 0"/>
+      <mass value="0.05"/>
+      <inertia ixx="0.00001" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.00001"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="-1.5707963 0 1.5707963"/>
+      <geometry>
+        <mesh filename="package://car_desciptionns/meshes/wheel_support.stl" scale="0.0003 0.0003 0.0003"/>
+      </geometry>
+      <material name="Silver"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.03" rpy="0 0 0"/>
+      <geometry>
+        <sphere radius="0.015"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="caster_fl_link">
+    <mu1>0.0</mu1>
+    <mu2>0.0</mu2>
+    <material>Gazebo/Silver</material>
+  </gazebo>
+
+  <!-- Trước Phải -->
+  <joint name="caster_fr_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="caster_fr_link"/>
+    <origin xyz="0.075 -0.06 -0.005" rpy="0 0 0"/>
+  </joint>
+  <link name="caster_fr_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.05"/>
+      <inertia ixx="0.00001" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.00001"/>
+    </inertial>
+    <visual>
+      <!-- Xoay cùm đứng xuống, góc lốp lăn đúng chiều -->
+      <origin xyz="0 0 0" rpy="-1.5707963 0 1.5707963"/>
+      <geometry>
+        <mesh filename="package://car_desciptionns/meshes/wheel_support.stl" scale="0.0003 0.0003 0.0003"/>
+      </geometry>
+      <material name="Silver"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.03" rpy="0 0 0"/>
+      <geometry>
+        <sphere radius="0.015"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="caster_fr_link">
+    <mu1>0.0</mu1>
+    <mu2>0.0</mu2>
+    <material>Gazebo/Silver</material>
+  </gazebo>
+
+  <!-- Sau Trái -->
+  <joint name="caster_bl_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="caster_bl_link"/>
+    <origin xyz="-0.075 0.06 -0.005" rpy="0 0 3.14159"/>
+  </joint>
+  <link name="caster_bl_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.05"/>
+      <inertia ixx="0.00001" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.00001"/>
+    </inertial>
+    <visual>
+      <!-- Xoay cùm đứng xuống, góc lốp lăn đúng chiều -->
+      <origin xyz="0 0 0" rpy="-1.5707963 0 1.5707963"/>
+      <geometry>
+        <mesh filename="package://car_desciptionns/meshes/wheel_support.stl" scale="0.0003 0.0003 0.0003"/>
+      </geometry>
+      <material name="Silver"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.03" rpy="0 0 0"/>
+      <geometry>
+        <sphere radius="0.015"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="caster_bl_link">
+    <mu1>0.0</mu1>
+    <mu2>0.0</mu2>
+    <material>Gazebo/Silver</material>
+  </gazebo>
+
+  <!-- Sau Phải -->
+  <joint name="caster_br_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="caster_br_link"/>
+    <origin xyz="-0.075 -0.06 -0.005" rpy="0 0 3.14159"/>
+  </joint>
+  <link name="caster_br_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.05"/>
+      <inertia ixx="0.00001" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.00001"/>
+    </inertial>
+    <visual>
+      <!-- Xoay cùm đứng xuống, góc lốp lăn đúng chiều -->
+      <origin xyz="0 0 0" rpy="-1.5707963 0 1.5707963"/>
+      <geometry>
+        <mesh filename="package://car_desciptionns/meshes/wheel_support.stl" scale="0.0003 0.0003 0.0003"/>
+      </geometry>
+      <material name="Silver"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.03" rpy="0 0 0"/>
+      <geometry>
+        <sphere radius="0.015"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="caster_br_link">
+    <mu1>0.0</mu1>
+    <mu2>0.0</mu2>
+    <material>Gazebo/Silver</material>
+  </gazebo>
+
+
+  <!-- =============================== NỘI THẤT TRONG BASE_LINK ===================== -->
+  <joint name="cover_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="cover_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+  <link name="cover_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.1"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://car_desciptionns/meshes/cover.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="White"><color rgba="0.95 0.95 0.95 1.0"/></material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.01" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.2 0.15 0.02"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="cover_link">
+    <material>Gazebo/White</material>
+  </gazebo>
+
+  <!-- Cụm Lidar Nằm Giữa Base Link -->
+  <joint name="lidar_holder_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="lidar_holder_link"/>
+    <origin xyz="0 0 0.013" rpy="0 0 0"/>
+  </joint>
+  <link name="lidar_holder_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.05"/>
+      <inertia ixx="0.00001" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.00001"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://car_desciptionns/meshes/lidar_holder.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="Green"><color rgba="0.2 0.8 0.2 1.0"/></material>
+    </visual>
+  </link>
+  <gazebo reference="lidar_holder_link">
+    <material>Gazebo/Green</material>
+  </gazebo>
+
+  <joint name="lidar_joint" type="fixed">
+    <parent link="lidar_holder_link"/>
+    <child link="lidar_link"/>
+    <origin xyz="0 0 0.008" rpy="0 0 0"/>
+  </joint>
+  <link name="lidar_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.1"/>
+      <inertia ixx="0.00005" ixy="0.0" ixz="0.0" iyy="0.00005" iyz="0.0" izz="0.00005"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://car_desciptionns/meshes/lidar_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="Black"><color rgba="0.05 0.05 0.05 1.0"/></material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.01" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.035" length="0.04"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="lidar_link">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <joint name="laser_joint" type="fixed">
+    <parent link="lidar_link"/>
+    <child link="laser"/>
+    <origin xyz="0 0 0.015" rpy="0 0 0"/>
+  </joint>
+  <link name="laser"/>
+
+
+  <!-- =============================== TẦNG THÂN (HOLDER) =========================== -->
+  <joint name="holder_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="holder_link"/>
+    <origin xyz="0 0 0.066" rpy="0 3.14159 0"/>
+  </joint>
+  <link name="holder_link">
+    <inertial>
+      <origin xyz="0 0 -0.03" rpy="0 0 0"/>
+      <mass value="0.2"/>
+      <inertia ixx="0.0002" ixy="0.0" ixz="0.0" iyy="0.0002" iyz="0.0" izz="0.0002"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://car_desciptionns/meshes/holder.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="Copper"><color rgba="0.75 0.5 0.35 1.0"/></material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.03" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.2 0.15 0.06"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="holder_link">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+
+  <!-- =============================== TẦNG ÁP MÁI (ADDON) ========================== -->
+  <joint name="addon_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="addon_link"/>
+    <origin xyz="0 0 0.1185" rpy="0 0 0"/>
+  </joint>
+  <link name="addon_link">
+    <inertial>
+      <origin xyz="0 0 0.01" rpy="0 0 0"/>
+      <mass value="0.1"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://car_desciptionns/meshes/addon.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="PaleYellow"><color rgba="0.9 0.85 0.7 1.0"/></material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.01" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.2 0.15 0.02"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="addon_link">
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+
+  <!-- =============================== Camera Front =============================== -->
+  <joint name="camera_joint" type="fixed">
+    <parent link="addon_link"/>
+    <child link="camera_link"/>
+    <origin xyz="0.13 0.025 0.08" rpy="1.57 0 1.57"/>
+  </joint>
+  <link name="camera_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.05"/>
+      <inertia ixx="0.00001" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.00001"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://car_desciptionns/meshes/astra.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="Gray"><color rgba="0.5 0.5 0.5 1.0"/></material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.04 0.16 0.03"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="camera_link">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+
+  <joint name="image_joint" type="fixed">
+    <parent link="camera_link"/>
+    <child link="image"/>
+    <origin xyz="0 0 0.015" rpy="0 0 0"/>
+  </joint>
+  <link name="image"/>
+
+  <!-- =============================== 2 BÁNH XE ===================== -->
+  <!-- Bánh Trái -->
+  <joint name="wheel_left_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_left_link"/>
+    <origin xyz="0 0.127 -0.0175" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+  <link name="wheel_left_link">
+    <inertial>
+      <!-- Cyliner quanh trục Y, ma trận xoay quanh Y -->
+      <origin xyz="0 0 0" rpy="1.5707963 0 0"/>
+      <mass value="0.2"/>
+      <inertia ixx="0.0000632" ixy="0.0" ixz="0.0" iyy="0.0001056" iyz="0.0" izz="0.0000632"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://car_desciptionns/meshes/wheel.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="Tire_Black"><color rgba="0.1 0.1 0.1 1.0"/></material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.5707963 0 0"/>
+      <geometry>
+        <cylinder radius="0.0325" length="0.025"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="wheel_left_link">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+    <!-- Trục lăn dọc theo trục xoay Y của lốp -->
+    <fdirl>0 0 1</fdirl>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <!-- Bánh Phải -->
+  <joint name="wheel_right_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_right_link"/>
+    <!-- Xoay ngược góc RPY = 0 0 3.14159 (180 độ) để mặt đẹp quay ra ngoài -->
+    <origin xyz="0 -0.127 -0.0175" rpy="0 0 3.14159"/>
+    <!-- Do quay ngược 180 độ theo Z, trục quay Y bị đảo ngược hướng, nên Axis phải là 0 -1 0 -->
+    <axis xyz="0 -1 0"/>
+  </joint>
+  <link name="wheel_right_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="1.5707963 0 0"/>
+      <mass value="0.2"/>
+      <inertia ixx="0.0000632" ixy="0.0" ixz="0.0" iyy="0.0001056" iyz="0.0" izz="0.0000632"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://car_desciptionns/meshes/wheel.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="Tire_Black"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.5707963 0 0"/>
+      <geometry>
+        <cylinder radius="0.0325" length="0.025"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="wheel_right_link">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+    <fdir1>0 0 1</fdir1>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <!-- =============================== GAZEBO ROS DIFF DRIVE ===================== -->
+  <gazebo>
+    <plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
+      <!-- Cấu hình khớp -->
+      <left_joint>wheel_left_joint</left_joint>
+      <right_joint>wheel_right_joint</right_joint>
+
+      <!-- Kích thước -->
+      <wheel_separation>0.254</wheel_separation>
+      <wheel_diameter>0.065</wheel_diameter>
+
+      <!-- Giới hạn Lực & Tốc độ -->
+      <max_wheel_torque>20</max_wheel_torque>
+      <max_wheel_acceleration>1.0</max_wheel_acceleration>
+
+      <!-- Odom -->
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>true</publish_odom_tf>
+      <publish_wheel_tf>true</publish_wheel_tf>
+
+      <odometry_frame>odom</odometry_frame>
+      <robot_base_frame>base_footprint</robot_base_frame>
+    </plugin>
+  </gazebo>
+
+</robot>

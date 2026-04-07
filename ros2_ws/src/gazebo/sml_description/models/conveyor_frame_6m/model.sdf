@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+<model name="conveyor_frame_6m">
+    <static>true</static>
+    <pose>3.0 0 0.14 0 0 0</pose>
+    <link name="link">
+      <inertial><mass>600000</mass>
+        <inertia><ixx>6e6</ixx><ixy>0</ixy><ixz>0</ixz>
+                 <iyy>6e6</iyy><iyz>0</iyz><izz>6e6</izz></inertia>
+      </inertial>
+
+      <!-- Main body (6.0m long) -->
+      <collision name="frame_col">
+        <geometry><box><size>6.0 0.5 0.28</size></box></geometry>
+      </collision>
+      <visual name="frame_vis">
+        <geometry><box><size>6.0 0.5 0.28</size></box></geometry>
+        <material>
+          <ambient>0.28 0.28 0.28 1</ambient>
+          <diffuse>0.30 0.30 0.30 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+        </material>
+      </visual>
+
+
+
+      <!-- Legs (every 1m) -->
+      <visual name="leg_1l"><pose>-2.96  0.21 -0.14 0 0 0</pose>
+        <geometry><box><size>0.04 0.04 0.28</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+      <visual name="leg_1r"><pose>-2.96 -0.21 -0.14 0 0 0</pose>
+        <geometry><box><size>0.04 0.04 0.28</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+      
+      <visual name="leg_2l"><pose>-2.0   0.21 -0.14 0 0 0</pose>
+        <geometry><box><size>0.04 0.04 0.28</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+      <visual name="leg_2r"><pose>-2.0  -0.21 -0.14 0 0 0</pose>
+        <geometry><box><size>0.04 0.04 0.28</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+
+      <visual name="leg_3l"><pose>-1.0   0.21 -0.14 0 0 0</pose>
+        <geometry><box><size>0.04 0.04 0.28</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+      <visual name="leg_3r"><pose>-1.0  -0.21 -0.14 0 0 0</pose>
+        <geometry><box><size>0.04 0.04 0.28</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+
+      <visual name="leg_4l"><pose> 0.0   0.21 -0.14 0 0 0</pose>
+        <geometry><box><size>0.04 0.04 0.28</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+      <visual name="leg_4r"><pose> 0.0  -0.21 -0.14 0 0 0</pose>
+        <geometry><box><size>0.04 0.04 0.28</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+
+      <visual name="leg_5l"><pose> 1.0   0.21 -0.14 0 0 0</pose>
+        <geometry><box><size>0.04 0.04 0.28</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+      <visual name="leg_5r"><pose> 1.0  -0.21 -0.14 0 0 0</pose>
+        <geometry><box><size>0.04 0.04 0.28</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+
+      <visual name="leg_6l"><pose> 2.0   0.21 -0.14 0 0 0</pose>
+        <geometry><box><size>0.04 0.04 0.28</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+      <visual name="leg_6r"><pose> 2.0  -0.21 -0.14 0 0 0</pose>
+        <geometry><box><size>0.04 0.04 0.28</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+
+      <visual name="leg_7l"><pose> 2.96  0.21 -0.14 0 0 0</pose>
+        <geometry><box><size>0.04 0.04 0.28</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+      <visual name="leg_7r"><pose> 2.96 -0.21 -0.14 0 0 0</pose>
+        <geometry><box><size>0.04 0.04 0.28</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+
+      <!-- Cross beams -->
+      <visual name="beam_1"><pose>-2.96 0 -0.10 0 0 0</pose>
+        <geometry><box><size>0.04 0.46 0.04</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+      <visual name="beam_2"><pose>-2.0 0 -0.10 0 0 0</pose>
+        <geometry><box><size>0.04 0.46 0.04</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+      <visual name="beam_3"><pose>-1.0 0 -0.10 0 0 0</pose>
+        <geometry><box><size>0.04 0.46 0.04</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+      <visual name="beam_4"><pose>0 0 -0.10 0 0 0</pose>
+        <geometry><box><size>0.04 0.46 0.04</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+      <visual name="beam_5"><pose>1.0 0 -0.10 0 0 0</pose>
+        <geometry><box><size>0.04 0.46 0.04</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+      <visual name="beam_6"><pose>2.0 0 -0.10 0 0 0</pose>
+        <geometry><box><size>0.04 0.46 0.04</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+      <visual name="beam_7"><pose>2.96 0 -0.10 0 0 0</pose>
+        <geometry><box><size>0.04 0.46 0.04</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+    </link>
+  </model>
+</sdf>

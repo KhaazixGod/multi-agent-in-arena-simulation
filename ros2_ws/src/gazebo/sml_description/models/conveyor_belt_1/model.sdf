@@ -1,0 +1,427 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+  <model name="conveyor_belt">
+    <!--
+      InfiniteConveyor plugin — drives all slat joints and wraps them.
+      Adjust belt_speed (m/s) to change conveyor speed.
+    -->
+    <plugin filename="InfiniteConveyorPlugin" name="conveyor::InfiniteConveyor">
+      <belt_speed>-0.2</belt_speed>
+      <end_x>4.32</end_x>
+      <num_slats>80</num_slats>
+      <slat_pitch>0.05</slat_pitch>
+      <first_slat_x>0.31</first_slat_x>
+      <slat_prefix>slat2</slat_prefix>
+      <coordinate>y</coordinate>
+      <cmd_vel_topic>/conveyor2/cmd_vel</cmd_vel_topic>
+    </plugin>
+      <model name="conveyor_frame_2">
+    <self_collide>true</self_collide>
+    <pose>0.5 0.29 0 0 0 1.5708</pose>
+    <include merge="true">
+      <uri>package://sml_description/models/conveyor_frame_4m</uri>
+    </include>
+  </model>
+    <!-- Slat Models (using modular include) -->
+    <model name="slat2_0">
+      <pose>0.5 0.31 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_0_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_1">
+      <pose>0.5 0.36 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_1_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_2">
+      <pose>0.5 0.41 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_2_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_3">
+      <pose>0.5 0.46 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_3_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_4">
+      <pose>0.5 0.51 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_4_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_5">
+      <pose>0.5 0.56 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_5_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_6">
+      <pose>0.5 0.61 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_6_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_7">
+      <pose>0.5 0.66 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_7_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_8">
+      <pose>0.5 0.71 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_8_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_9">
+      <pose>0.5 0.76 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_9_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_10">
+      <pose>0.5 0.81 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_10_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_11">
+      <pose>0.5 0.86 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_11_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_12">
+      <pose>0.5 0.91 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_12_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_13">
+      <pose>0.5 0.96 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_13_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_14">
+      <pose>0.5 1.01 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_14_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_15">
+      <pose>0.5 1.06 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_15_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_16">
+      <pose>0.5 1.11 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_16_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_17">
+      <pose>0.5 1.16 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_17_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_18">
+      <pose>0.5 1.21 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_18_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_19">
+      <pose>0.5 1.26 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_19_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_20">
+      <pose>0.5 1.31 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_20_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_21">
+      <pose>0.5 1.36 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_21_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_22">
+      <pose>0.5 1.41 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_22_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_23">
+      <pose>0.5 1.46 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_23_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_24">
+      <pose>0.5 1.51 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_24_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_25">
+      <pose>0.5 1.56 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_25_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_26">
+      <pose>0.5 1.61 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_26_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_27">
+      <pose>0.5 1.66 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_27_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_28">
+      <pose>0.5 1.71 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_28_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_29">
+      <pose>0.5 1.76 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_29_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_30">
+      <pose>0.5 1.81 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_30_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_31">
+      <pose>0.5 1.86 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_31_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_32">
+      <pose>0.5 1.91 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_32_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_33">
+      <pose>0.5 1.96 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_33_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_34">
+      <pose>0.5 2.01 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_34_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_35">
+      <pose>0.5 2.06 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_35_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_36">
+      <pose>0.5 2.11 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_36_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_37">
+      <pose>0.5 2.16 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_37_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_38">
+      <pose>0.5 2.21 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_38_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_39">
+      <pose>0.5 2.26 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_39_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_40">
+      <pose>0.5 2.31 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_40_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_41">
+      <pose>0.5 2.36 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_41_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_42">
+      <pose>0.5 2.41 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_42_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_43">
+      <pose>0.5 2.46 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_43_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_44">
+      <pose>0.5 2.51 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_44_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_45">
+      <pose>0.5 2.56 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_45_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_46">
+      <pose>0.5 2.61 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_46_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_47">
+      <pose>0.5 2.66 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_47_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_48">
+      <pose>0.5 2.71 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_48_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_49">
+      <pose>0.5 2.76 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_49_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_50">
+      <pose>0.5 2.81 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_50_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_51">
+      <pose>0.5 2.86 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_51_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_52">
+      <pose>0.5 2.91 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_52_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_53">
+      <pose>0.5 2.96 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_53_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_54">
+      <pose>0.5 3.01 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_54_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_55">
+      <pose>0.5 3.06 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_55_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_56">
+      <pose>0.5 3.11 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_56_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_57">
+      <pose>0.5 3.16 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_57_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_58">
+      <pose>0.5 3.21 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_58_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_59">
+      <pose>0.5 3.26 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_59_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_60">
+      <pose>0.5 3.31 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_60_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_61">
+      <pose>0.5 3.36 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_61_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_62">
+      <pose>0.5 3.41 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_62_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_63">
+      <pose>0.5 3.46 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_63_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_64">
+      <pose>0.5 3.51 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_64_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_65">
+      <pose>0.5 3.56 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_65_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_66">
+      <pose>0.5 3.61 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_66_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_67">
+      <pose>0.5 3.66 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_67_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_68">
+      <pose>0.5 3.71 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_68_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_69">
+      <pose>0.5 3.76 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_69_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_70">
+      <pose>0.5 3.81 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_70_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_71">
+      <pose>0.5 3.86 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_71_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_72">
+      <pose>0.5 3.91 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_72_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_73">
+      <pose>0.5 3.96 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_73_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_74">
+      <pose>0.5 4.01 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_74_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_75">
+      <pose>0.5 4.06 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_75_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_76">
+      <pose>0.5 4.11 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_76_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_77">
+      <pose>0.5 4.16 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_77_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_78">
+      <pose>0.5 4.21 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_78_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+    <model name="slat2_79">
+      <pose>0.5 4.26 0.29 0 0 1.5708</pose>
+      <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+      <joint name="slat2_79_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz></axis></joint>
+    </model>
+  </model>
+</sdf>

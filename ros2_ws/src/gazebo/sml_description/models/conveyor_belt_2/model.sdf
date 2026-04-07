@@ -1,0 +1,624 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+  <model name="conveyor_belt">
+
+    <model name="conveyor_frame">
+    <self_collide>true</self_collide>
+    <pose>0 0 0 0 0 0</pose>
+    <include merge="true">
+      <uri>package://sml_description/models/conveyor_frame_6m</uri>
+    </include>
+    </model>
+
+    <plugin filename="InfiniteConveyorPlugin" name="conveyor::InfiniteConveyor">
+      <belt_speed>0.2</belt_speed>
+      <end_x>6.02</end_x>
+      <num_slats>120</num_slats>
+      <slat_pitch>0.05</slat_pitch>
+      <first_slat_x>0.02</first_slat_x>
+      <slat_prefix>slat</slat_prefix>
+      <cmd_vel_topic>/conveyor/cmd_vel</cmd_vel_topic>
+    </plugin>
+
+  <model name="slat_0">
+    <pose>0.02 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_0_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_1">
+    <pose>0.07 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_1_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_2">
+    <pose>0.12 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_2_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_3">
+    <pose>0.17 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_3_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_4">
+    <pose>0.22 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_4_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_5">
+    <pose>0.27 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_5_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_6">
+    <pose>0.32 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_6_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_7">
+    <pose>0.37 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_7_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_8">
+    <pose>0.42 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_8_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_9">
+    <pose>0.47 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_9_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_10">
+    <pose>0.52 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_10_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_11">
+    <pose>0.57 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_11_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_12">
+    <pose>0.62 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_12_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_13">
+    <pose>0.67 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_13_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_14">
+    <pose>0.72 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_14_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_15">
+    <pose>0.77 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_15_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_16">
+    <pose>0.82 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_16_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_17">
+    <pose>0.87 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_17_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_18">
+    <pose>0.92 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_18_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_19">
+    <pose>0.97 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_19_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_20">
+    <pose>1.02 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_20_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_21">
+    <pose>1.07 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_21_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_22">
+    <pose>1.12 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_22_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_23">
+    <pose>1.17 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_23_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_24">
+    <pose>1.22 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_24_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_25">
+    <pose>1.27 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_25_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_26">
+    <pose>1.32 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_26_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_27">
+    <pose>1.37 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_27_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_28">
+    <pose>1.42 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_28_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_29">
+    <pose>1.47 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_29_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_30">
+    <pose>1.52 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_30_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_31">
+    <pose>1.57 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_31_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_32">
+    <pose>1.62 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_32_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_33">
+    <pose>1.67 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_33_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_34">
+    <pose>1.72 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_34_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_35">
+    <pose>1.77 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_35_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_36">
+    <pose>1.82 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_36_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_37">
+    <pose>1.87 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_37_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_38">
+    <pose>1.92 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_38_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_39">
+    <pose>1.97 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_39_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_40">
+    <pose>2.02 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_40_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_41">
+    <pose>2.07 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_41_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_42">
+    <pose>2.12 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_42_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_43">
+    <pose>2.17 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_43_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_44">
+    <pose>2.22 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_44_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_45">
+    <pose>2.27 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_45_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_46">
+    <pose>2.32 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_46_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_47">
+    <pose>2.37 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_47_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_48">
+    <pose>2.42 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_48_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_49">
+    <pose>2.47 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_49_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_50">
+    <pose>2.52 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_50_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_51">
+    <pose>2.57 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_51_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_52">
+    <pose>2.62 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_52_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_53">
+    <pose>2.67 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_53_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_54">
+    <pose>2.72 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_54_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_55">
+    <pose>2.77 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_55_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_56">
+    <pose>2.82 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_56_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_57">
+    <pose>2.87 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_57_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_58">
+    <pose>2.92 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_58_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_59">
+    <pose>2.97 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_59_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_60">
+    <pose>3.02 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_60_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_61">
+    <pose>3.07 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_61_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_62">
+    <pose>3.12 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_62_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_63">
+    <pose>3.17 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_63_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_64">
+    <pose>3.22 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_64_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_65">
+    <pose>3.27 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_65_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_66">
+    <pose>3.32 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_66_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_67">
+    <pose>3.37 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_67_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_68">
+    <pose>3.42 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_68_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_69">
+    <pose>3.47 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_69_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_70">
+    <pose>3.52 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_70_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_71">
+    <pose>3.57 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_71_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_72">
+    <pose>3.62 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_72_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_73">
+    <pose>3.67 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_73_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_74">
+    <pose>3.72 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_74_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_75">
+    <pose>3.77 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_75_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_76">
+    <pose>3.82 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_76_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_77">
+    <pose>3.87 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_77_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_78">
+    <pose>3.92 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_78_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_79">
+    <pose>3.97 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_79_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_80">
+    <pose>4.02 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_80_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_81">
+    <pose>4.07 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_81_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_82">
+    <pose>4.12 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_82_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_83">
+    <pose>4.17 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_83_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_84">
+    <pose>4.22 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_84_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_85">
+    <pose>4.27 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_85_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_86">
+    <pose>4.32 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_86_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_87">
+    <pose>4.37 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_87_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_88">
+    <pose>4.42 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_88_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_89">
+    <pose>4.47 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_89_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_90">
+    <pose>4.52 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_90_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_91">
+    <pose>4.57 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_91_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_92">
+    <pose>4.62 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_92_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_93">
+    <pose>4.67 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_93_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_94">
+    <pose>4.72 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_94_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_95">
+    <pose>4.77 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_95_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_96">
+    <pose>4.82 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_96_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_97">
+    <pose>4.87 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_97_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_98">
+    <pose>4.92 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_98_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_99">
+    <pose>4.97 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_99_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_100">
+    <pose>5.02 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_100_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_101">
+    <pose>5.07 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_101_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_102">
+    <pose>5.12 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_102_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_103">
+    <pose>5.17 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_103_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_104">
+    <pose>5.22 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_104_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_105">
+    <pose>5.27 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_105_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_106">
+    <pose>5.32 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_106_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_107">
+    <pose>5.37 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_107_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_108">
+    <pose>5.42 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_108_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_109">
+    <pose>5.47 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_109_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_110">
+    <pose>5.52 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_110_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_111">
+    <pose>5.57 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_111_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_112">
+    <pose>5.62 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_112_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_113">
+    <pose>5.67 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_113_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_114">
+    <pose>5.72 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_114_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_115">
+    <pose>5.77 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_115_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_116">
+    <pose>5.82 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_116_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_117">
+    <pose>5.87 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_117_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_118">
+    <pose>5.92 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_118_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+  <model name="slat_119">
+    <pose>5.97 0 0.29 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/slat</uri></include>
+    <joint name="slat_119_joint" type="prismatic"><parent>world</parent><child>link</child><axis><xyz>1 0 0</xyz><limit><lower>-1e9</lower><upper>1e9</upper><effort>1e9</effort><velocity>10</velocity></limit></axis></joint>
+  </model>
+    </model>
+</sdf>

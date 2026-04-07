@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+<model name="conveyor_frame_2m">
+    <static>true</static>
+    <pose>1.0 0 0.14 0 0 0</pose>
+    <link name="link">
+      <inertial><mass>200000</mass>
+        <inertia><ixx>2e6</ixx><ixy>0</ixy><ixz>0</ixz>
+                 <iyy>2e6</iyy><iyz>0</iyz><izz>2e6</izz></inertia>
+      </inertial>
+
+      <!-- Main body (2.0m long) -->
+      <collision name="frame_col">
+        <geometry><box><size>2.0 0.5 0.28</size></box></geometry>
+      </collision>
+      <visual name="frame_vis">
+        <geometry><box><size>2.0 0.5 0.28</size></box></geometry>
+        <material>
+          <ambient>0.28 0.28 0.28 1</ambient>
+          <diffuse>0.30 0.30 0.30 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+        </material>
+      </visual>
+
+
+      <!-- 6 legs (for 2m conveyor) -->
+      <visual name="leg_fl"><pose>-0.96  0.21 -0.14 0 0 0</pose>
+        <geometry><box><size>0.04 0.04 0.28</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+      <visual name="leg_fr"><pose>-0.96 -0.21 -0.14 0 0 0</pose>
+        <geometry><box><size>0.04 0.04 0.28</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+      
+      <visual name="leg_ml"><pose> 0.0   0.21 -0.14 0 0 0</pose>
+        <geometry><box><size>0.04 0.04 0.28</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+      <visual name="leg_mr"><pose> 0.0  -0.21 -0.14 0 0 0</pose>
+        <geometry><box><size>0.04 0.04 0.28</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+
+      <visual name="leg_bl"><pose> 0.96  0.21 -0.14 0 0 0</pose>
+        <geometry><box><size>0.04 0.04 0.28</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+      <visual name="leg_br"><pose> 0.96 -0.21 -0.14 0 0 0</pose>
+        <geometry><box><size>0.04 0.04 0.28</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+
+      <!-- Cross beams -->
+      <visual name="beam_front"><pose>-0.96 0 -0.10 0 0 0</pose>
+        <geometry><box><size>0.04 0.46 0.04</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+      <visual name="beam_mid"><pose>0 0 -0.10 0 0 0</pose>
+        <geometry><box><size>0.04 0.46 0.04</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+      <visual name="beam_back"><pose>0.96 0 -0.10 0 0 0</pose>
+        <geometry><box><size>0.04 0.46 0.04</size></box></geometry>
+        <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+    </link>
+  </model>
+</sdf>
