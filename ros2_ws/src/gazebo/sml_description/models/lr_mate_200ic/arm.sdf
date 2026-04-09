@@ -1,0 +1,144 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <model name="lr_mate_200ic">
+
+    <static>true</static>
+
+    <link name="root">
+
+      <inertial>
+        <pose>0 0 0.3 0 0 0</pose>
+        <mass>15.0</mass>
+        <inertia>
+          <ixx>0.5</ixx><ixy>0.0</ixy><ixz>0.0</ixz>
+          <iyy>0.5</iyy><iyz>0.0</iyz>
+          <izz>0.5</izz>
+        </inertia>
+      </inertial>
+
+      <collision name="base_collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/pread/Project/robot_envirionment/multi-agent-in-arena-simulation/ros2_ws/src/gazebo/sml_description/models/lr_mate_200ic/meshes/base.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <!-- axis3 (grey) -->
+      <visual name="visual_axis3">
+        <pose>0.075 9.32387e-17 0.63 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/pread/Project/robot_envirionment/multi-agent-in-arena-simulation/ros2_ws/src/gazebo/sml_description/models/lr_mate_200ic/meshes/axis3.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.498 0.498 0.498 1</ambient>
+          <diffuse>0.498 0.498 0.498 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+
+      <!-- axis2 (blue_light) -->
+      <visual name="visual_axis2">
+        <pose>0.075 1.1391e-16 0.33 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/pread/Project/robot_envirionment/multi-agent-in-arena-simulation/ros2_ws/src/gazebo/sml_description/models/lr_mate_200ic/meshes/axis2.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.615 0.811 0.929 1</ambient>
+          <diffuse>0.615 0.811 0.929 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+
+      <!-- axis1 (white_blue) -->
+      <visual name="visual_axis1">
+        <pose>0 0 0.33 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/pread/Project/robot_envirionment/multi-agent-in-arena-simulation/ros2_ws/src/gazebo/sml_description/models/lr_mate_200ic/meshes/axis1.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.768 0.886 0.952 1</ambient>
+          <diffuse>0.768 0.886 0.952 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+
+
+      <!-- axis4 (orange) -->
+      <visual name="visual_axis4">
+        <pose>0.395 6.245e-17 0.705 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/pread/Project/robot_envirionment/multi-agent-in-arena-simulation/ros2_ws/src/gazebo/sml_description/models/lr_mate_200ic/meshes/axis4.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.98 0.713 0.003 1</ambient>
+          <diffuse>0.98 0.713 0.003 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+
+      <!-- base -->
+      <visual name="visual_base">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/pread/Project/robot_envirionment/multi-agent-in-arena-simulation/ros2_ws/src/gazebo/sml_description/models/lr_mate_200ic/meshes/base.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+
+      <!-- axis6 -->
+      <visual name="visual_axis6">
+        <pose>0.475 3.46945e-18 0.705 0 -1.5708 3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/pread/Project/robot_envirionment/multi-agent-in-arena-simulation/ros2_ws/src/gazebo/sml_description/models/lr_mate_200ic/meshes/axis6.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+
+      <!-- axis5 -->
+      <visual name="visual_axis5">
+        <pose>0.395 -4.85723e-17 0.705 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/pread/Project/robot_envirionment/multi-agent-in-arena-simulation/ros2_ws/src/gazebo/sml_description/models/lr_mate_200ic/meshes/axis5.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+
+    </link>
+  </model>
+</sdf>

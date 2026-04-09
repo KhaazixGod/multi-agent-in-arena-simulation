@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<robot name="lr_mate_200ic">
+
+  <link name="root">
+    <inertial>
+      <origin xyz="0 0 0.3" rpy="0 0 0" />
+      <mass value="15.0" /> <inertia ixx="0.5" ixy="0" ixz="0" iyy="0.5" iyz="0" izz="0.5" />
+    </inertial>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://lr_mate_200ic/meshes/base.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+
+    <visual>
+        <origin xyz="0.075 9.32387e-17 0.63" rpy="0 -0 0" />
+        <geometry>
+            <mesh filename="package://lr_mate_200ic/meshes/axis3.stl" scale="1 1 1" />
+        </geometry>
+        <material name="grey">
+            <color rgba="0.498 0.498 0.498 1" />
+        </material>
+    </visual>
+
+    <visual>
+        <origin xyz="0.075 1.1391e-16 0.33" rpy="0 -0 0" />
+        <geometry>
+            <mesh filename="package://lr_mate_200ic/meshes/axis2.stl" scale="1 1 1" />
+        </geometry>
+        <material name="blue_light">
+            <color rgba="0.615 0.811 0.929 1" />
+        </material>
+    </visual>
+
+    <visual>
+        <origin xyz="0 0 0.33" rpy="0 -0 0" />
+        <geometry>
+            <mesh filename="package://lr_mate_200ic/meshes/axis1.stl" scale="1 1 1" />
+        </geometry>
+        <material name="white_blue">
+            <color rgba="0.768 0.886 0.952 1" />
+        </material>
+    </visual>
+
+    <visual>
+        <origin xyz="0 0 0" rpy="1.5708 0 0" />
+        <geometry>
+            <mesh filename="package://lr_mate_200ic/meshes/envelope.stl" scale="1 1 1" />
+        </geometry>
+    </visual>
+
+    <visual>
+        <origin xyz="0.395 6.245e-17 0.705" rpy="0 -0 0" />
+        <geometry>
+            <mesh filename="package://lr_mate_200ic/meshes/axis4.stl" scale="1 1 1" />
+        </geometry>
+        <material name="orange">
+            <color rgba="0.98 0.713 0.003 1" />
+        </material>
+    </visual>
+
+    <visual>
+        <origin xyz="0 0 0" rpy="0 -0 0" />
+        <geometry>
+            <mesh filename="package://lr_mate_200ic/meshes/base.stl" scale="1 1 1" />
+        </geometry>
+    </visual>
+
+    <visual>
+        <origin xyz="0.475 3.46945e-18 0.705" rpy="0 -1.5708 3.14159" />
+        <geometry>
+            <mesh filename="package://lr_mate_200ic/meshes/axis6.stl" scale="1 1 1" />
+        </geometry>
+    </visual>
+
+    <visual>
+        <origin xyz="0.395 -4.85723e-17 0.705" rpy="0 -0 0" />
+        <geometry>
+            <mesh filename="package://lr_mate_200ic/meshes/axis5.stl" scale="1 1 1" />
+        </geometry>
+    </visual>
+  </link>
+
+  <gazebo reference="root">
+    <static>true</static>
+  </gazebo>
+
+</robot>
