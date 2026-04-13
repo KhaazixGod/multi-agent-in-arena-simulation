@@ -99,13 +99,30 @@
   </model>
 
   <model name="conveyor_belt_4">
-    <pose>9.0 0 0 0 0 0</pose>
+    <pose>7.0 0 0 0 0 0</pose>
     <include merge="true"><uri>package://sml_description/models/conveyor_belt_4</uri></include>
   </model>
 
   <model name="arm_1">
-    <pose>9.0 0 0 0 0 0</pose>
-    <include merge="true"><uri>package://sml_description/models/Panda</uri></include>
+    <pose>6.5 1 0 0 0 0</pose>
+    <include merge="true">
+      <uri>package://sml_description/models/Panda</uri>
+      <scale>3 3 3</scale>
+    </include>
+  </model>
+  <model name="arm_2">
+    <pose>5 0.7 0 0 0 0</pose>
+    <include merge="true">
+      <uri>package://sml_description/models/Panda</uri>
+      <scale>3 3 3</scale>
+    </include>
+  </model>
+  <model name="arm_3">
+    <pose>1 0.7 0 0 0 0</pose>
+    <include merge="true">
+      <uri>package://sml_description/models/Panda</uri>
+      <scale>3 3 3</scale>
+    </include>
   </model>
   <!-- ═══════════════════════════════════════════════════════════════════ -->
   <!--  TEST ITEMS                                                        -->
