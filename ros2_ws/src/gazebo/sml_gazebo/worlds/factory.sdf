@@ -103,6 +103,10 @@
     <include merge="true"><uri>package://sml_description/models/conveyor_belt_4</uri></include>
   </model>
 
+  <model name="arm_1">
+    <pose>9.0 0 0 0 0 0</pose>
+    <include merge="true"><uri>package://sml_description/models/Panda</uri></include>
+  </model>
   <!-- ═══════════════════════════════════════════════════════════════════ -->
   <!--  TEST ITEMS                                                        -->
   <!--  Belt top = z 0.30, box half-height = 0.05 → center z = 0.35     -->
